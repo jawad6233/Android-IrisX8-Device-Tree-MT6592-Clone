@@ -1,6 +1,10 @@
 #!/bin/bash
 
  cd ../../../..
+ cd external/icu
+ patch -p1 < ../../device/LAVA/IRISX8/Patch/android_external_icu
+ 
+ cd ../..
  cd system/vold
  patch -p1 < ../../device/LAVA/IRISX8/Patch/android_system_vold.patch
  
